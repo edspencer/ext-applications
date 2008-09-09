@@ -7,7 +7,7 @@ Ext.ux.App.ImageBrowser.view.Edit = function(config) {
   var config = config || {};
   
   Ext.applyIf(config, {
-    model: Image,
+    model: Ext.ux.App.ImageBrowser.Image,
     formConfig: {
       items: Ext.ux.App.ImageBrowser.view.FormFields()
     }

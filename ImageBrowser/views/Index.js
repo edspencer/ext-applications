@@ -14,7 +14,7 @@ Ext.ux.App.ImageBrowser.view.Index = function(config) {
     hasHelpTool: true,
     
     gridConfig: {
-      model: Image,
+      model:   Ext.ux.App.ImageBrowser.Image,
       columns: [
         { header: 'Content type', dataIndex: 'content_type',   type: 'string', hidden: true},
         { header: 'Preview',      dataIndex: 'thumb_filename', type: 'string', renderer: Ext.util.Format.renderThumbnail, sortable: false},

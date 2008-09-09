@@ -7,7 +7,7 @@ Ext.ux.App.ImageBrowser.view.New = function(config) {
   var config = config || {};
   
   Ext.applyIf(config, {
-    model: Image,
+    model: Ext.ux.App.ImageBrowser.Image,
     formConfig: {
       fileUpload: true,
       items: [

@@ -11,7 +11,7 @@ Ext.ux.App.ImageBrowser.view.Help = function(config) {
     html: [
       {tag: 'h1', html: 'Image Browser Help'},
       {tag: 'p',  html: 'The Image Browser application displays all uploaded images, as well as allowing you to upload new images.  You can also edit the details or delete existing images'},
-      Ext.ux.App.view.GenericHelpWindow.keyboardShortcuts(Image)
+      Ext.ux.App.view.GenericHelpWindow.keyboardShortcuts(Ext.ux.App.ImageBrowser.Image)
     ]
   });
   

@@ -5,10 +5,11 @@
  */
 Ext.ux.App.SpecRunner.SpecRunnerController = function(config) {
   var config = config || {};
-  Ext.apply(this, config);
   
-  this.viewsPackage = "Ext.ux.App.SpecRunner.view";
-  this.viewWindowNamespace = 'spec-runner';
+  Ext.applyIf(config, {
+    viewsPackage        : "Ext.ux.App.SpecRunner.view",
+    viewWindowNamespace : 'spec-runner'
+  });
   
   Ext.ux.App.SpecRunner.SpecRunnerController.superclass.constructor.call(this, config);
 };

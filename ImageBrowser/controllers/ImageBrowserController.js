@@ -6,10 +6,10 @@
 Ext.ux.App.ImageBrowser.ImageBrowserController = function(config) {
   var config = config || {};
   
-  Ext.apply(this, config);
-  
-  this.viewsPackage        = "Ext.ux.App.ImageBrowser.view";
-  this.viewWindowNamespace = 'image-browser';
+  Ext.applyIf(config, {
+    viewsPackage        : "Ext.ux.App.ImageBrowser.view",
+    viewWindowNamespace : 'image-browser'
+  });
     
   Ext.ux.App.ImageBrowser.ImageBrowserController.superclass.constructor.call(this, config);
 };

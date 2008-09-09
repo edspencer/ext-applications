@@ -5,14 +5,11 @@
  */
 Ext.ux.App.ImageBrowser = function(config) {
   var config = config || {};
-    
-  this.windowGroup = new Ext.WindowGroup();
   
   this.model      = Ext.ux.App.ImageBrowser.Image;
   this.controller = new Ext.ux.App.ImageBrowser.ImageBrowserController({
-    model: this.model, 
-    windowGroup: this.windowGroup,
-    app: this
+    model:       this.model, 
+    app:         this
   });
   
   this.id = 'image-browser-win';
