@@ -1,0 +1,32 @@
+Ext.ux.App.OrderManager.view.GridColumns = function() {
+  return [
+    { header: 'Email',                               dataIndex: 'email',               type: 'string'},
+    { header: 'Title',                               dataIndex: 'title',               type: 'string'},
+    { header: 'First name',                          dataIndex: 'first_name',          type: 'string'},
+    { header: 'Last name',                           dataIndex: 'last_name',           type: 'string'},
+    { header: 'Address 1',                           dataIndex: 'address_1',           type: 'string'},
+    { header: 'Address 2',                           dataIndex: 'address_2',           type: 'string'},
+    { header: 'Address 3',                           dataIndex: 'address_3',           type: 'string'},
+    { header: 'Town',                                dataIndex: 'town',                type: 'string'},
+    { header: 'County',                              dataIndex: 'county',              type: 'string'},
+    { header: 'Country',                             dataIndex: 'country',             type: 'string', hidden: true},
+    { header: 'Postcode',                            dataIndex: 'postcode',            type: 'string'},
+    { header: 'Phone',                               dataIndex: 'phone',               type: 'string'},
+    { header: 'Status',                              dataIndex: 'status',              type: 'string'},
+    { header: 'Delivery price',                      dataIndex: 'delivery_price',      type: 'string', hidden: true},
+    { header: 'Order placed',                        dataIndex: 'created_at',          type: 'string'},
+    { header: 'Last updated',                        dataIndex: 'updated_at',          type: 'string'},
+    { header: 'Delivery address 1',                  dataIndex: 'delivery_address_1',  type: 'string', hidden: true},
+    { header: 'Delivery address 2',                  dataIndex: 'delivery_address_2',  type: 'string', hidden: true},
+    { header: 'Delivery address 3',                  dataIndex: 'delivery_address_3',  type: 'string', hidden: true},
+    { header: 'Delivery town',                       dataIndex: 'delivery_town',       type: 'string', hidden: true},
+    { header: 'Delivery county',                     dataIndex: 'delivery_county',     type: 'string', hidden: true},
+    { header: 'Delivery postcode',                   dataIndex: 'delivery_postcode',   type: 'string', hidden: true},
+    { header: 'Alternative access',                  dataIndex: 'alternative_access',  type: 'string', hidden: true},
+    { header: 'Delivery date',                       dataIndex: 'delivery_date',       type: 'string'},
+    { header: 'Latitude',                            dataIndex: 'lat',                 type: 'int',    hidden: true},
+    { header: 'Longitude',                           dataIndex: 'lng',                 type: 'int',    hidden: true},
+    { header: 'Percentage discount',                 dataIndex: 'percentage_discount', type: 'int',    hidden: true},
+    { header: 'Amount paid',                         dataIndex: 'amount_paid',         type: 'string', hidden: true}
+  ];
+};
