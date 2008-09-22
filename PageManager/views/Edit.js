@@ -1,6 +1,6 @@
 /**
  * Ext.ux.App.PageManager.view.Edit
- * @extends Ext.ux.App.view.DefaultEditWindow
+ * @extends Ext.ux.App.view.DefaultEditWindowWithTinyMce
  * Page Manager edit Page view
  */
 Ext.ux.App.PageManager.view.Edit = function(config) {
@@ -9,11 +9,12 @@ Ext.ux.App.PageManager.view.Edit = function(config) {
   Ext.applyIf(config, {
     model: Ext.ux.App.PageManager.Page,
     formConfig: {
-      items: Ext.ux.App.PageManager.view.FormFields()
+      items: Ext.ux.App.PageManager.view.FormFields(),
+      defaults: {xtype: null}
     }
   });
   
   Ext.ux.App.PageManager.view.Edit.superclass.constructor.call(this, config);
 };
-Ext.extend(Ext.ux.App.PageManager.view.Edit, Ext.ux.App.view.DefaultEditWindow);
+Ext.extend(Ext.ux.App.PageManager.view.Edit, Ext.ux.App.view.DefaultEditWindowWithTinyMce);
 Ext.reg('page-manager_edit', Ext.ux.App.PageManager.view.Edit);

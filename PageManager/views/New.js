@@ -1,6 +1,6 @@
 /**
  * Ext.ux.App.PageManager.view.New
- * @extends Ext.ux.App.view.DefaultNewWindow
+ * @extends Ext.ux.App.view.DefaultNewWindowWithTinyMce
  * Page Manager new Page form window
  */
 Ext.ux.App.PageManager.view.New = function(config) {
@@ -16,5 +16,5 @@ Ext.ux.App.PageManager.view.New = function(config) {
   
   Ext.ux.App.PageManager.view.New.superclass.constructor.call(this, config);
 };
-Ext.extend(Ext.ux.App.PageManager.view.New, Ext.ux.App.view.DefaultNewWindow);
+Ext.extend(Ext.ux.App.PageManager.view.New, Ext.ux.App.view.DefaultNewWindowWithTinyMce);
 Ext.reg('page-manager_new', Ext.ux.App.PageManager.view.New);
