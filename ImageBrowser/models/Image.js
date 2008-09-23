@@ -1,6 +1,7 @@
 Ext.ux.App.ImageBrowser.Image = new Ext.ux.MVC.model.Base('image', {
   fields: [
     {name: 'id',              type: 'int'},
+    {name: 'size',            type: 'int'},
     {name: 'title',           type: 'string'},
     {name: 'description',     type: 'string'},
     {name: 'public_filename', type: 'string'},

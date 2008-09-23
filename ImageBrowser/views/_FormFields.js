@@ -2,20 +2,17 @@ Ext.ux.App.ImageBrowser.view.FormFields = function() {
   return [
     {
       fieldLabel: 'Title',
-      name: 'image[title]',
-      id: 'title'
+      name:       'image[title]'
     },
     {
       fieldLabel: 'Caption',
-      name: 'image[caption]',
-      id: 'caption'
+      name:       'image[caption]'
     },
     {
-      xtype: 'textarea',
+      xtype:      'textarea',
       fieldLabel: 'Description',
-      name: 'image[description]',
-      id: 'description',
-      anchor: "-15 -90"
+      name:       'image[description]',
+      anchor:     "-15 -90"
     }
   ];
 };
