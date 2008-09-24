@@ -7,6 +7,9 @@ Ext.ux.App.ImageBrowser.view.InfoPanel = function(config) {
   var config = config || {};
   
   Ext.applyIf(config, { model: Ext.ux.App.ImageBrowser.Image});
+  
+  //keep a reference to the currently displayed image to avoid refreshing the panel unnecessarily
+  this.currentImageId = 0;
     
   this.template = new Ext.Template(
     '<div class="image-information">',
@@ -48,9 +51,15 @@ Ext.extend(Ext.ux.App.ImageBrowser.view.InfoPanel, Ext.Panel, {
    * Updates the information and thumbnail based on the given Image record
    */
   updateInfo: function(record) {
+    //don't refresh the panel if we're already showing this image
+    if (this.currentImageId == record.data.id) { return;};
+    
     this.infoPanel.getEl().hide();
     this.template.overwrite(this.infoPanel.getEl(), record.data);
     this.infoPanel.getEl().slideIn('l', {stopFx:true,duration:.2});
+    
+    //keep a reference to the newly displayed image ID
+    this.currentImageId = record.data.id;
   }
 });
 

@@ -9,6 +9,7 @@ Ext.ux.App.CategoryManager.Category = new Ext.ux.MVC.model.Base('category', {
     { name: 'description', type: 'string'},
     { name: 'url_param',   type: 'string'}
   ],
-  plural_name: 'categories',
-  url_name:    'categories'
+  human_plural_name: 'Categories',
+  plural_name:       'categories',
+  url_name:          'categories'
 });

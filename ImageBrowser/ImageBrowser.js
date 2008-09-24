@@ -6,6 +6,8 @@
 Ext.ux.App.ImageBrowser = function(config) {
   var config = config || {};
   
+  this.version = 1.0;
+  
   this.model      = Ext.ux.App.ImageBrowser.Image;
   this.controller = new Ext.ux.App.ImageBrowser.ImageBrowserController({
     model:       this.model, 

@@ -7,7 +7,7 @@
 Ext.ux.App.CategoryManager = function(config) {
   var config = config || {};
   
-  this.version = 0.1;
+  this.version = 0.2;
   
   this.model      = Ext.ux.App.CategoryManager.Category;
   this.controller = new Ext.ux.App.CategoryManager.CategoryManagerController({

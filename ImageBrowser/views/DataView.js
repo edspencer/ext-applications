@@ -27,7 +27,8 @@ Ext.ux.App.ImageBrowser.view.DataView = function(config) {
     multiSelect:  false,
     store:        this.store,
     tpl:          this.template,
-    autoHeight:   true
+    autoHeight:   true,
+    loadMask:     true
   });
   
   Ext.ux.App.ImageBrowser.view.DataView.superclass.constructor.call(this, config);

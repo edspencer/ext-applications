@@ -27,6 +27,7 @@ Ext.ux.App.ImageBrowser.view.Index = function(config) {
   this.mainPanel.controller = this.controller;
   
   this.mainPanel.dataView.on('selectionchange', this.updateInfoPanel, this);
+  this.mainPanel.dataView.on('dblclick', this.editImage, this);
 };
 
 Ext.extend(Ext.ux.App.ImageBrowser.view.Index, Ext.Window, {
@@ -35,10 +36,31 @@ Ext.extend(Ext.ux.App.ImageBrowser.view.Index, Ext.Window, {
    * Intended to be attached to the DataView's selectionchange event
    */
   updateInfoPanel: function(dataview, selections) {
-    var record = this.mainPanel.dataView.getSelectedRecords()[0];
+    var record = this.currentlySelectedImage();
     if (record) {
       this.infoPanel.updateInfo(record);
     };
+  },
+  
+  /**
+   * Opens the edit window for this image.  Intended to be attached to the DataView's dblclick event
+   */
+  editImage: function(dataview, index, node, event) {
+    var record = this.currentlySelectedImage();
+    if (record) {
+      this.controller.callAction('edit', [record.data.id], {
+        listeners: {
+          'save': {
+            scope: this,
+            fn:    function() {this.mainPanel.dataView.store.reload();}
+          }
+        }
+      });
+    };    
+  },
+  
+  currentlySelectedImage: function() {
+    return this.mainPanel.dataView.getSelectedRecords()[0];
   }
 });
 
