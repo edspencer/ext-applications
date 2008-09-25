@@ -170,10 +170,6 @@ Ext.ux.App.ProductManager.view.FormFields = function() {
         title:  'Product Details',
         layout: 'form',
         items:  mainTab
-      },
-      {
-        title:  'Additional Details',
-        items:  detailsTab
       }
     ]
   };

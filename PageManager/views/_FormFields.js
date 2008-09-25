@@ -41,13 +41,13 @@ Ext.ux.App.PageManager.view.FormFields = function() {
       xtype:      'textarea',
       fieldLabel: 'Meta Description', 
       name:       'page[description]',
-      anchor:     '98%'
+      anchor:     '96%'
     },
     {
       xtype:      'textarea',
       fieldLabel: 'Meta Keywords',
       name:       'page[keywords]',
-      anchor:     '98%'
+      anchor:     '96%'
     }
   ];
 };
