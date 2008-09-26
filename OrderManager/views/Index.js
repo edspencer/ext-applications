@@ -15,6 +15,10 @@ Ext.ux.App.OrderManager.view.Index = function(config) {
     gridConfig: {
       model:   Ext.ux.App.OrderManager.Order,
       columns: Ext.ux.App.OrderManager.view.GridColumns()
+    },
+    
+    topToolbarConfig: {
+      hasAddButton: false
     }
   });
   

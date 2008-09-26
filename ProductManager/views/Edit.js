@@ -25,7 +25,7 @@ Ext.ux.App.ProductManager.view.Edit = function(config) {
       defaults:  {xtype: null},
       bodyStyle: 'padding: 5px',
       cls:       'x-panel-mc',
-      items:     Ext.ux.App.ProductManager.view.FormFields(config.object_id)
+      items:     Ext.ux.App.ProductManager.view.FormFields(config.object_id).concat(Ext.ux.App.ProductManager.view.EditFormFields(config.object_id))
     }
   });
   

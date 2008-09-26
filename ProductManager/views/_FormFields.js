@@ -1,4 +1,4 @@
-Ext.ux.App.ProductManager.view.FormFields = function(id) {
+Ext.ux.App.ProductManager.view.FormFields = function() {
   var items = [
     {
       layout: 'column',
@@ -11,7 +11,7 @@ Ext.ux.App.ProductManager.view.FormFields = function(id) {
               fieldLabel: 'Title',
               name:       'product[title]',
               xtype:      'textfield',
-              anchor:     "-15"
+              anchor:     "-20"
             },
             {
               layout: 'column',
@@ -52,7 +52,7 @@ Ext.ux.App.ProductManager.view.FormFields = function(id) {
               fieldLabel: 'Feature strapline', 
               name:       'product[feature_strapline]', 
               xtype:      'textfield', 
-              anchor:     "-15"
+              anchor:     "-20"
             },
             {
               layout: 'column',
@@ -105,38 +105,7 @@ Ext.ux.App.ProductManager.view.FormFields = function(id) {
           fieldLabel: 'Description',
           name:       'product[description]',
           xtype:      'htmleditor',
-          anchor:     "-15"
-        }
-      ]
-    },
-    {
-      layout: 'column',
-      items: [
-        {
-          columnWidth: .5,
-          layout: 'form',
-          items: [
-            {
-              xtype:      'image_associator',
-              model:      Ext.ux.App.ProductManager.Product,
-              imageModel: Ext.ux.App.ImageBrowser.Image,
-              objectId:   id,
-              anchor:     "-10"
-            }
-          ]
-        },
-        {
-          columnWidth: .5,
-          layout: 'form',
-          items: [
-            {
-              xtype:         'category_associator',
-              model:         Ext.ux.App.ProductManager.Product,
-              categoryModel: Ext.ux.App.CategoryManager.Category,
-              objectId:      id,
-              anchor:        "-15"
-            }
-          ]
+          anchor:     "-20"
         }
       ]
     }

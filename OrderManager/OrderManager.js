@@ -27,7 +27,56 @@ Ext.ux.App.OrderManager = function(config) {
   };
   
   Ext.ux.App.OrderManager.superclass.constructor.call(this, config);
+  
+  this.registerStyleSheet();
 };
-Ext.extend(Ext.ux.App.OrderManager, Ext.ux.App.Base);
+Ext.extend(Ext.ux.App.OrderManager, Ext.ux.App.Base, {
+  styleSheetId: 'order-manager-stylesheet',
+  
+  styleSheetRules: ' \
+  .thumb-wrap { \
+      float: left; \
+      width: 120px; \
+      height: 120px; \
+      text-align: center; \
+      padding-top: 10px; \
+    } \
+    \
+    .thumb-wrap thumb img { margin: 0 auto;} \
+    .x-view-selected { background-color: #CAD9EC;} \
+    .x-view-over { border: 4px solid #CAD9EC; width: 112px; height:116px; padding-top: 6px;} \
+     \
+    .order-information { \
+      padding: 5px; \
+    } \
+    \
+    .order-information .image-preview { \
+      text-align: center; \
+      padding-bottom: 5px; \
+      margin-bottom: 5px; \
+      border-bottom: 1px solid #ccc; \
+    } \
+    \
+    .order-information dt { \
+      font-weight: bold; \
+      color: #555; \
+    } \
+    \
+    .order-information dd { \
+      padding: 5px; \
+    } \
+    \
+    .details { text-align: center;} \
+    .details img {padding: 5px 0;} \
+    .details .details-info {text-align: left; padding: 5px;} \
+    .details .details-info dt {font-weight: bold; display: block; padding: 5px 0 3px 0;}',
+  
+  /**
+   * Adds custom CSS rules for the image browser
+   */
+  registerStyleSheet: function() {
+    Ext.util.CSS.createStyleSheet(this.styleSheetRules, this.styleSheetId);
+  }
+});
 
 Ext.ns("Ext.ux.App.OrderManager.view");

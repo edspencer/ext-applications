@@ -1,5 +1,7 @@
 Ext.ux.App.OrderManager.view.GridColumns = function() {
   return [
+    { header: 'Order placed',                        dataIndex: 'created_at',          type: 'string'},
+    { header: 'Status',                              dataIndex: 'status',              type: 'string'},
     { header: 'Email',                               dataIndex: 'email',               type: 'string'},
     { header: 'Title',                               dataIndex: 'title',               type: 'string'},
     { header: 'First name',                          dataIndex: 'first_name',          type: 'string'},
@@ -12,9 +14,7 @@ Ext.ux.App.OrderManager.view.GridColumns = function() {
     { header: 'Country',                             dataIndex: 'country',             type: 'string', hidden: true},
     { header: 'Postcode',                            dataIndex: 'postcode',            type: 'string'},
     { header: 'Phone',                               dataIndex: 'phone',               type: 'string'},
-    { header: 'Status',                              dataIndex: 'status',              type: 'string'},
     { header: 'Delivery price',                      dataIndex: 'delivery_price',      type: 'string', hidden: true},
-    { header: 'Order placed',                        dataIndex: 'created_at',          type: 'string'},
     { header: 'Last updated',                        dataIndex: 'updated_at',          type: 'string'},
     { header: 'Delivery address 1',                  dataIndex: 'delivery_address_1',  type: 'string', hidden: true},
     { header: 'Delivery address 2',                  dataIndex: 'delivery_address_2',  type: 'string', hidden: true},

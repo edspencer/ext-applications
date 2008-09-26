@@ -9,8 +9,10 @@ Ext.ux.App.ProductManager.view.New = function(config) {
   Ext.applyIf(config, {
     model: Ext.ux.App.ProductManager.Product,
     formConfig: {
-      defaults: {xtype: null, anchor: null},
-      items: Ext.ux.App.ProductManager.view.FormFields()
+      defaults:  {xtype: null},
+      bodyStyle: 'padding: 5px',
+      cls:       'x-panel-mc',
+      items:     Ext.ux.App.ProductManager.view.FormFields()
     }
   });
   
