@@ -1,5 +1,5 @@
-Ext.ux.App.ProductManager.view.FormFields = function() {
-  var mainTab = [
+Ext.ux.App.ProductManager.view.FormFields = function(id) {
+  var items = [
     {
       layout: 'column',
       items: [
@@ -108,46 +108,33 @@ Ext.ux.App.ProductManager.view.FormFields = function() {
           anchor:     "-15"
         }
       ]
-    }
-  ];
-  
-  
-  var detailsTab = [
+    },
     {
-      xtype: 'fieldset',
-      title: 'Meta Content - used for SEO purposes',
-      layout: 'fit',
+      layout: 'column',
       items: [
         {
-          layout: 'column',
+          columnWidth: .5,
+          layout: 'form',
           items: [
             {
-              columnWidth: .5,
-              layout: 'form',
-              labelAlign: 'top',
-              items: [
-                { 
-                  fieldLabel: 'Meta description',
-                  name:       'product[meta_description]',
-                  xtype:      'textarea',
-                  height:     300,
-                  anchor:     "-15"
-                }
-              ]
-            },
+              xtype:      'image_associator',
+              model:      Ext.ux.App.ProductManager.Product,
+              imageModel: Ext.ux.App.ImageBrowser.Image,
+              objectId:   id,
+              anchor:     "-10"
+            }
+          ]
+        },
+        {
+          columnWidth: .5,
+          layout: 'form',
+          items: [
             {
-              columnWidth: .5,
-              layout: 'form',
-              labelAlign: 'top',
-              items: [
-                {
-                  fieldLabel: 'Meta keywords',
-                  name:       'product[meta_keywords]',
-                  xtype:      'textarea',
-                  height:     300,
-                  anchor:     "-15"
-                }
-              ]
+              xtype:         'category_associator',
+              model:         Ext.ux.App.ProductManager.Product,
+              categoryModel: Ext.ux.App.CategoryManager.Category,
+              objectId:      id,
+              anchor:        "-15"
             }
           ]
         }
@@ -155,24 +142,5 @@ Ext.ux.App.ProductManager.view.FormFields = function() {
     }
   ];
   
-  var tabs = {
-    xtype:    'tabpanel',
-    activeTab: 0,
-    defaults: {
-      autoHeight: true,
-      cls:        'x-panel-mc',
-      bodyStyle:  'padding: 5px 0 10px 10px; background-color: #fff;'
-    },
-    border:     false,
-    bodyBorder: false,
-    items: [
-      {
-        title:  'Product Details',
-        layout: 'form',
-        items:  mainTab
-      }
-    ]
-  };
-  
-  return tabs;
+  return items;
 };

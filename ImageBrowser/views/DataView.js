@@ -32,5 +32,38 @@ Ext.ux.App.ImageBrowser.view.DataView = function(config) {
   });
   
   Ext.ux.App.ImageBrowser.view.DataView.superclass.constructor.call(this, config);
+  
+  this.on('render', this.initializeDragZone, this);
 };
-Ext.extend(Ext.ux.App.ImageBrowser.view.DataView, Ext.DataView);
+
+Ext.extend(Ext.ux.App.ImageBrowser.view.DataView, Ext.DataView, {
+  /**
+   * Sets up each item in the DataView as a draggable element
+   */
+  initializeDragZone: function() {
+    this.dragZone = new Ext.dd.DragZone(this.getEl(), {
+      
+      getDragData: function(e) {
+        var sourceEl = e.getTarget('div.thumb-wrap', 10);
+        
+        if (sourceEl) {
+          var draggable = sourceEl.cloneNode(true);
+          
+          draggable.id = Ext.id();
+          
+          return this.dragData = {
+            sourceEl:  sourceEl,
+            repairXY:  Ext.fly(sourceEl).getXY(),
+            ddel:      draggable,
+            imageData: {id: sourceEl.id.split("-")[1]}
+          };
+        };
+      },
+      
+      getRepairXY: function() {
+        return this.dragData.repairXY;
+      }
+      
+    });
+  }
+});
