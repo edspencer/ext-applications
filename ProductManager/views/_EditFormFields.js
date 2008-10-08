@@ -21,11 +21,37 @@ Ext.ux.App.ProductManager.view.EditFormFields = function(id) {
           layout: 'form',
           items: [
             {
-              xtype:         'category_associator',
-              model:         Ext.ux.App.ProductManager.Product,
-              categoryModel: Ext.ux.App.CategoryManager.Category,
-              objectId:      id,
-              anchor:        "-15"
+              xtype:      'category_associator',
+              objectId:   id,
+              anchor:     "-15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      layout: 'column',
+      bodyStyle: 'padding: 10px 0;',
+      items: [
+        {
+          columnWidth: .5,
+          layout: 'form',
+          items: [
+            {
+              xtype:    'colour_associator',
+              objectId: id,
+              anchor:   "-10"
+            }
+          ]
+        },
+        {
+          columnWidth: .5,
+          layout: 'form',
+          items: [
+            {
+              xtype:    'size_associator',
+              objectId: id,
+              anchor:   "-15"
             }
           ]
         }

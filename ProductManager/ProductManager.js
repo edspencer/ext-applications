@@ -31,3 +31,5 @@ Ext.ux.App.ProductManager = function(config) {
 Ext.extend(Ext.ux.App.ProductManager, Ext.ux.App.Base);
 
 Ext.ns("Ext.ux.App.ProductManager.view");
+Ext.ns("Ext.ux.App.ProductManager.view.Colour");
+Ext.ns("Ext.ux.App.ProductManager.view.Size");
