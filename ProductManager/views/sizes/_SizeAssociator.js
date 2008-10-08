@@ -88,7 +88,7 @@ Ext.extend(Ext.ux.App.ProductManager.view.Size.SizeAssociator, Ext.ux.App.view.H
           this.sizeModel.destroy(node.id, {
             scope:   this,
             success: function() {
-              Ext.ux.MVC.Flash.flash("The Size has been deleted");
+              Ext.ux.MVC.NotificationManager.inform("The Size has been deleted");
               this.refreshTree();
             },
             failure: function() {

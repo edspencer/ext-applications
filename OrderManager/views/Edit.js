@@ -130,7 +130,7 @@ Ext.extend(Ext.ux.App.OrderManager.view.Edit, Ext.Window, {
       url:    this.model.singleDataUrl(this.object_id),
       scope:  this,
       success: function() {
-        Ext.ux.MVC.Flash.flash('The order was successfully updated');
+        Ext.ux.MVC.NotificationManager.inform('The order was successfully updated');
         if (this.fireEvent('save')) {
           this.close();
         };

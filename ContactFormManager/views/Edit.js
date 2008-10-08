@@ -188,7 +188,7 @@ Ext.extend(Ext.ux.App.ContactFormManager.view.Edit, Ext.Window, {
       url:    this.model.singleDataUrl(this.object_id),
       scope:  this,
       success: function() {
-        Ext.ux.MVC.Flash.flash('The contact was successfully updated');
+        Ext.ux.MVC.NotificationManager.inform('The contact was successfully updated');
         if (this.fireEvent('save')) {
           this.close();
         };

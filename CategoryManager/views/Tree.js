@@ -95,7 +95,7 @@ Ext.extend(Ext.ux.App.CategoryManager.view.Tree, Ext.tree.TreePanel, {
     //callbacks to be called after delete
     var destroyConfig = {
       success: function() {
-        Ext.ux.MVC.Flash.flash('The Category has been successfully deleted', 'Category deleted');
+        Ext.ux.MVC.NotificationManager.inform('The Category has been successfully deleted');
         this.updateTree();
       },
       failure: function() {
@@ -136,7 +136,7 @@ Ext.extend(Ext.ux.App.CategoryManager.view.Tree, Ext.tree.TreePanel, {
       params:  "parent=" + newParent.id + "&index=" + index,
       
       success: function() {
-        Ext.ux.MVC.Flash.flash('The ' + human_name + ' was moved successfully', human_name + ' moved');
+        Ext.ux.MVC.NotificationManager.inform('The ' + human_name + ' was moved successfully');
       },
       
       failure: function() {

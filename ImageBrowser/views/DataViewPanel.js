@@ -121,7 +121,7 @@ Ext.extend(Ext.ux.App.ImageBrowser.view.DataViewPanel, Ext.Panel, {
       //callbacks to be called after delete
       var destroyConfig = {
         success: function() {
-          Ext.ux.MVC.Flash.flash('The Image has been successfully deleted', 'Image deleted');
+          Ext.ux.MVC.NotificationManager.inform('The Image has been successfully deleted');
           this.dataView.store.reload();
         },
         failure: function() {

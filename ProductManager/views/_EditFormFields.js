@@ -23,7 +23,7 @@ Ext.ux.App.ProductManager.view.EditFormFields = function(id) {
             {
               xtype:      'category_associator',
               objectId:   id,
-              anchor:     "-15"
+              anchor:     "-20"
             }
           ]
         }
@@ -51,7 +51,7 @@ Ext.ux.App.ProductManager.view.EditFormFields = function(id) {
             {
               xtype:    'size_associator',
               objectId: id,
-              anchor:   "-15"
+              anchor:   "-20"
             }
           ]
         }
