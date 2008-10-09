@@ -88,7 +88,7 @@ Ext.extend(Ext.ux.App.ProductManager.view.Colour.ColourAssociator, Ext.ux.App.vi
           this.colourModel.destroy(node.id, {
             scope:   this,
             success: function() {
-              Ext.ux.MVC.NotificationManager.inform({message: 'The colour has been deleted'});
+              Ext.ux.MVC.NotificationManager.inform('The colour has been deleted');
               this.refreshTree();
             },
             failure: function() {
