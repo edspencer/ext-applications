@@ -16,7 +16,9 @@ Ext.ux.App.CategoryManager.view.Index = function(config) {
     iconCls: 'category',
     title:   'Category Manager',
     layout:  'border',
-    items:   [this.tree, this.form]
+    items:   [this.tree, this.form],
+    width:   800,
+    height:  600
   });  
   
   Ext.ux.App.CategoryManager.view.Index.superclass.constructor.call(this, config);
