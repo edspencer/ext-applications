@@ -103,7 +103,7 @@ Ext.extend(Ext.ux.App.ImageBrowser.view.DataViewPanel, Ext.Panel, {
     this.controller.callAction('new', {
       listeners: {
         'save': {
-          fn:    function() {console.log("test"); this.dataView.store.reload();},
+          fn:    function() {this.dataView.store.reload();},
           scope: this
         }
       }

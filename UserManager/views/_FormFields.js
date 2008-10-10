@@ -1,28 +1,93 @@
 Ext.ux.App.UserManager.view.FormFields = function() {
   return [
     {
-      fieldLabel: 'Login (username)',
-      name: 'user[login]'
+      layout: 'column',
+      items: [
+        {
+          columnWidth: .5,
+          layout: 'form',
+          items: [
+            {
+              xtype:      'textfield',
+              anchor:     '-15',
+              fieldLabel: 'Login (username)',
+              name:       'user[login]'
+            }
+          ]
+        },
+        {
+          columnWidth: .5,
+          layout: 'form',
+          items: [
+            {
+              xtype:      'textfield',
+              anchor:     '-15',
+              fieldLabel: 'Email Address',
+              name:       'user[email]'
+            }
+          ]
+        }
+      ]
     },
     {
-      fieldLabel: 'Email Address',
-      name: 'user[email]'
+      layout: 'column',
+      items: [
+        {
+          columnWidth: .5,
+          layout: 'form',
+          items: [
+            {
+              xtype:      'textfield',
+              anchor:     "-15",
+              fieldLabel: 'First Name',
+              name:       'user[first_name]'
+            }
+          ]
+        },
+        {
+          columnWidth: .5,
+          layout: 'form',
+          items: [
+            {
+              xtype:      'textfield',
+              anchor:     "-15",
+              fieldLabel: 'Last Name',
+              name:       'user[last_name]'
+            }
+          ]
+        }
+      ]
     },
     {
-      fieldLabel: 'Display Name (forum name)',
-      name: 'user[display_name]'
-    },
-    {
-      fieldLabel: 'First Name',
-      name: 'user[first_name]'
-    },
-    {
-      fieldLabel: 'Last Name',
-      name: 'user[last_name]'
-    },
-    {
-      fieldLabel: 'Gender',
-      name: 'user[gender]'
+      layout: 'column',
+      items: [
+        {
+          columnWidth: .5,
+          layout: 'form',
+          items: [
+            {
+              fieldLabel: 'Password',
+              name:       'user[password]',
+              xtype:      'textfield',
+              inputType:  'password',
+              anchor:     '-15'
+            }
+          ]
+        },
+        {
+          columnWidth: .5,
+          layout: 'form',
+          items: [
+            {
+              fieldLabel: 'Confirm Password',
+              name:       'user[password_confirmation]',
+              xtype:      'textfield',
+              inputType:  'password',
+              anchor:     '-15'
+            }
+          ]
+        }
+      ]
     }
   ];
 };

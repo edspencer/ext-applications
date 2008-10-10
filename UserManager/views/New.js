@@ -9,7 +9,8 @@ Ext.ux.App.UserManager.view.New = function(config) {
   Ext.applyIf(config, {
     model: Ext.ux.App.UserManager.User,
     formConfig: {
-      items: Ext.ux.App.UserManager.view.FormFields()
+      items:    Ext.ux.App.UserManager.view.FormFields(),
+      defaults: {xtype: null}
     }
   });
   
