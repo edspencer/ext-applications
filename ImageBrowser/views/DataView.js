@@ -49,13 +49,23 @@ Ext.extend(Ext.ux.App.ImageBrowser.view.DataView, Ext.DataView, {
         if (sourceEl) {
           var draggable = sourceEl.cloneNode(true);
           
+          var imageId = sourceEl.id.split("-")[1];
+          
           draggable.id = Ext.id();
           
           return this.dragData = {
             sourceEl:  sourceEl,
             repairXY:  Ext.fly(sourceEl).getXY(),
             ddel:      draggable,
-            imageData: {id: sourceEl.id.split("-")[1]}
+            imageData: {id: imageId},
+            
+            shortcutConfig: {
+              text: 'Image',
+              icon: '/images/icons/48x48/accept.png',
+              launchConfig: {
+                
+              }
+            }
           };
         };
       },

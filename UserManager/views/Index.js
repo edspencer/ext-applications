@@ -15,7 +15,8 @@ Ext.ux.App.UserManager.view.Index = function(config) {
     
     gridConfig: {
       model:   Ext.ux.App.UserManager.User,
-      columns: Ext.ux.App.UserManager.view.GridColumns()
+      columns: Ext.ux.App.UserManager.view.GridColumns(),
+      enableDragDrop: true
     }
   });
   

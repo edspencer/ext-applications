@@ -12,7 +12,7 @@ Ext.ux.App.ProductManager.view.Size.New = function(config) {
     modal:     true,
     resizable: false,
     width:     220,
-    height:    120,
+    height:    100,
     
     formConfig: {
       labelWidth: 50,
