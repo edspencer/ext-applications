@@ -8,6 +8,11 @@ Ext.ux.App.DesignerManager.view.New = function(config) {
   
   Ext.applyIf(config, {
     model: Ext.ux.App.DesignerManager.Designer,
+    width:     650,
+    minWidth:  650,
+    height:    450,
+    minHeight: 450,
+    
     formConfig: {
       items: Ext.ux.App.DesignerManager.view.FormFields()
     }

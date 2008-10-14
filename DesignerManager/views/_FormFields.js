@@ -1,4 +1,4 @@
-Ext.ux.App.DesignerManager.view.FormFields = function() {
+Ext.ux.App.DesignerManager.view.FormFields = function(id) {
   return [
     {
       xtype:      'textfield',
