@@ -16,15 +16,14 @@ Ext.ux.App.DesignerManager.view.Edit = function(config) {
     formConfig: {
       defaults: {xtype: null},
       layout:   'border',
-      items:  [
+      items:    [
         { 
-          width:     230,
-          minWidth:  230,
-          region:    'west',
-          split:     true,
-          layout:    'fit',
+          width:       230,
+          minWidth:    230,
+          region:      'west',
+          split:       true,
+          layout:      'fit',
           collapsible: true,
-          // bodyStyle: 'padding: 0 10px 10px 10px;',
           bodyStyle:  'padding: 0 0 22px 6px;',
           items: [
             {
