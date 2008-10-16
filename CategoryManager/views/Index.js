@@ -72,11 +72,11 @@ Ext.extend(Ext.ux.App.CategoryManager.view.Index, Ext.Window, {
       });
 
       this.form.form.loadRecord(record);
-      console.log("loading record");
+      // console.log("loading record");
     } else {
       //load the record
       this.form.loadForm(id);
-      console.log("loading from url");
+      // console.log("loading from url");
     };
   },
   

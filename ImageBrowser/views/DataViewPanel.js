@@ -116,7 +116,6 @@ Ext.extend(Ext.ux.App.ImageBrowser.view.DataViewPanel, Ext.Panel, {
   deleteSelected: function() {
     var record = this.dataView.getSelectedRecords()[0];
     if (record) {
-      console.log('deleting image ' + record.data.id);
       
       //callbacks to be called after delete
       var destroyConfig = {

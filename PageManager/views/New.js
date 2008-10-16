@@ -8,6 +8,9 @@ Ext.ux.App.PageManager.view.New = function(config) {
   
   Ext.applyIf(config, {
     model: Ext.ux.App.PageManager.Page,
+    width:  850,
+    height: 620,
+    
     formConfig: {
       items:    Ext.ux.App.PageManager.view.FormFields(),
       defaults: {xtype: null}

@@ -86,7 +86,7 @@ Ext.extend(Ext.ux.App.CategoryManager.view.Tree, Ext.tree.TreePanel, {
     //force the node to be selected, and load the form
     this.getSelectionModel().select(node);
     
-    console.log("appended node");
+    // console.log("appended node");
   },
   
   deleteCategory: function() {

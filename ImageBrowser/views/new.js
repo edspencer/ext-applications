@@ -10,6 +10,7 @@ Ext.ux.App.ImageBrowser.view.New = function(config) {
     model: Ext.ux.App.ImageBrowser.Image,
     formConfig: {
       fileUpload: true,
+      defaults: {xtype: null},
       items: [
         {
           xtype:      'textfield',

@@ -86,8 +86,8 @@ Ext.ux.App.ContactFormManager.view.Edit = function(config) {
     iconCls: 'feedback',
     items:   [this.infoPanel, this.form],
     
-    height: 300,
-    width:  400
+    height: 350,
+    width:  600
   });
   
   Ext.ux.App.ContactFormManager.view.Edit.superclass.constructor.call(this, config);

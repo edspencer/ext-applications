@@ -22,7 +22,7 @@ Ext.ux.App.ImageBrowser.view.DataView = function(config) {
     itemSelector: 'div.thumb-wrap',
     style:        'overflow: auto',
     overClass:    'x-view-over',
-    emptyText:    'No images to display',
+    emptyText:    '<p style="padding: 10px; font-family: verdana;">No images to display</p>',
     singleSelect: true,
     multiSelect:  false,
     store:        this.store,
