@@ -14,7 +14,10 @@ Ext.ux.App.PageManager.view.Edit = function(config) {
   });
   
   Ext.applyIf(config, {
-    model: Ext.ux.App.PageManager.Page,
+    model:  Ext.ux.App.PageManager.Page,
+    width:  850,
+    height: 620,
+    
     formConfig: {
       items: Ext.ux.App.PageManager.view.FormFields(),
       defaults: {xtype: null},
@@ -29,6 +32,8 @@ Ext.extend(Ext.ux.App.PageManager.view.Edit, Ext.ux.App.view.DefaultEditWindowWi
    * Opens a preview iframe with current contents of the page edit form
    */
   preview: function() {
+    tinyMCE.triggerSave();
+    
     var form = this.form.form;
     var dataFields = ['page[title]', 'page[content]'];
         

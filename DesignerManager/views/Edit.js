@@ -7,9 +7,52 @@ Ext.ux.App.DesignerManager.view.Edit = function(config) {
   var config = config || {};
   
   Ext.applyIf(config, {
-    model: Ext.ux.App.DesignerManager.Designer,
+    model:     Ext.ux.App.DesignerManager.Designer,
+    width:     882,
+    minWidth:  882,
+    height:    450,
+    minHeight: 450,
+    
     formConfig: {
-      items: Ext.ux.App.DesignerManager.view.FormFields()
+      defaults: {xtype: null},
+      layout:   'border',
+      items:    [
+        { 
+          width:       230,
+          minWidth:    230,
+          region:      'west',
+          split:       true,
+          layout:      'fit',
+          collapsible: true,
+          bodyStyle:  'padding: 0 0 22px 6px;',
+          items: [
+            {
+              xtype:      'image_associator',
+              model:      Ext.ux.App.DesignerManager.Designer,
+              imageModel: Ext.ux.App.ImageBrowser.Image,
+              objectId:   config.object_id,
+              title:      'Attach Image'
+            }
+          ]
+        },
+        {
+          region: 'center',
+          layout: 'form',
+          items:  [
+            {
+              xtype:      'textfield',
+              fieldLabel: 'Name', 
+              name:       'designer[name]'
+            },
+            {
+              xtype:      'htmleditor',
+              fieldLabel: 'Description',
+              name:       'designer[description]',
+              anchor:     "-15 -50"
+            }
+          ]
+        }
+      ]
     }
   });
   

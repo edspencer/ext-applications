@@ -17,7 +17,7 @@ Ext.ux.App.ImageBrowser.view.Index = function(config) {
     title:   'Image Browser',
     layout:  'border',
     height:  600,
-    width:   800,
+    width:   820,
     items:   [this.mainPanel, this.infoPanel]
   });
   

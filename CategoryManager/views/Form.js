@@ -66,7 +66,7 @@ Ext.ux.App.CategoryManager.view.Form = function(config) {
 
 Ext.extend(Ext.ux.App.CategoryManager.view.Form, Ext.form.FormPanel, {
   saveChanges: function() {
-    console.log("saving changes");
+    // console.log("saving changes");
   },
   
   /**
