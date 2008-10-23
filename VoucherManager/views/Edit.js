@@ -8,15 +8,15 @@ Ext.ux.App.VoucherManager.view.Edit = function(config) {
   
   Ext.applyIf(config, {
     model:      Ext.ux.App.VoucherManager.Voucher,
-    height:     200,
-    minHeight:  200,
-    maxHeight:  200,
+    height:     230,
+    minHeight:  230,
+    maxHeight:  230,
     formConfig: {
       items: Ext.ux.App.VoucherManager.view.FormFields(),
       defaults: {xtype: null}
     },
     helpConfig: {
-      html: '<h1>Vouchers</h1><p>Enter a voucher code, and either an amount or a percentage.</p><p>Voucher codes must be unique, and can only be used once.  They can be any combination of letters and numbers.</p>'
+      html: '<h1>Vouchers</h1><p>Enter a voucher code, and either an amount or a percentage.</p><p>Voucher codes must be unique, and can only be used once.  They can be any combination of letters and numbers.</p><p>Tick single use to only allow the voucher to be used once.</p>'
     }
   });
   
