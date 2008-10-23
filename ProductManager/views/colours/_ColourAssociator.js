@@ -38,12 +38,16 @@ Ext.ux.App.ProductManager.view.Colour.ColourAssociator = function(config) {
     height:     315,
     habtmModel: this.colourModel,
     model:      Ext.ux.App.ProductManager.Product,
-    tbar:       this.tbar
+    tbar:       this.tbar,
+    treeConfig: {
+      enableDD: true
+    }
   });
   
   Ext.ux.App.ProductManager.view.Colour.ColourAssociator.superclass.constructor.call(this, config);
   
   this.tree.getSelectionModel().on('selectionchange', this.updateDeleteButtonStatus, this);
+  this.tree.on('movenode', this.colourModel.moveTreeNode, this.colourModel);
 };
 
 Ext.extend(Ext.ux.App.ProductManager.view.Colour.ColourAssociator, Ext.ux.App.view.HABTMTree, {

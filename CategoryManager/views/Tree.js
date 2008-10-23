@@ -61,7 +61,7 @@ Ext.ux.App.CategoryManager.view.Tree = function(config) {
     if (node) { this.deleteButton.enable(); }
   }, this);
   
-  this.on('movenode', this.nodemoved, this);
+  this.on('movenode', this.model.moveTreeNode, this.model);
 };
 
 Ext.extend(Ext.ux.App.CategoryManager.view.Tree, Ext.tree.TreePanel, {
@@ -128,6 +128,7 @@ Ext.extend(Ext.ux.App.CategoryManager.view.Tree, Ext.tree.TreePanel, {
    * Fires an Ajax request to tell the server to update its representation of the Category tree
    */
   nodemoved: function(tree, node, oldParent, newParent, index) {
+    
     var human_name = this.model.human_singular_name;
     
     Ext.Ajax.request({

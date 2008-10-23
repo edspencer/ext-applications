@@ -38,12 +38,16 @@ Ext.ux.App.ProductManager.view.Size.SizeAssociator = function(config) {
     height:     315,
     habtmModel: this.sizeModel,
     model:      Ext.ux.App.ProductManager.Product,
-    tbar:       this.tbar
+    tbar:       this.tbar,
+    treeConfig: {
+      enableDD: true
+    }
   });
   
   Ext.ux.App.ProductManager.view.Size.SizeAssociator.superclass.constructor.call(this, config);
   
   this.tree.getSelectionModel().on('selectionchange', this.updateDeleteButtonStatus, this);
+  this.tree.on('movenode', this.sizeModel.moveTreeNode, this.sizeModel);
 };
 
 Ext.extend(Ext.ux.App.ProductManager.view.Size.SizeAssociator, Ext.ux.App.view.HABTMTree, {
