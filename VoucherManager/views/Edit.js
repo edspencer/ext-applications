@@ -11,6 +11,7 @@ Ext.ux.App.VoucherManager.view.Edit = function(config) {
     height:     230,
     minHeight:  230,
     maxHeight:  230,
+    minWidth:   640,
     formConfig: {
       items: Ext.ux.App.VoucherManager.view.FormFields(),
       defaults: {xtype: null}

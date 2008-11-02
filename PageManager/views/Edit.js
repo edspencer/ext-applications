@@ -29,7 +29,7 @@ Ext.ux.App.PageManager.view.Edit = function(config) {
 };
 Ext.extend(Ext.ux.App.PageManager.view.Edit, Ext.ux.App.view.DefaultEditWindowWithTinyMce, {
   /**
-   * Opens a preview iframe with current contents of the page edit form
+   * Opens a preview window with current contents of the page edit form
    */
   preview: function() {
     tinyMCE.triggerSave();
@@ -48,7 +48,7 @@ Ext.extend(Ext.ux.App.PageManager.view.Edit, Ext.ux.App.view.DefaultEditWindowWi
     };
     
     Ext.Ajax.request({
-      url: '/admin/pages/preview',
+      url:    '/admin/pages/preview',
       method: 'post',
       scope:  this,
       params: data,

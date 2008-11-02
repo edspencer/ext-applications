@@ -13,7 +13,7 @@ Ext.ux.App.ProductManager.view.Edit = function(config) {
     collapsible: false,
     tools: [
       {
-        id: 'help',
+        id:   'help',
         scope: this,
         handler: function() {
           this.controller.callAction('edit_help');
