@@ -26,7 +26,7 @@ Ext.ux.App.ImageBrowser = function(config) {
   };
     
   Ext.ux.App.ImageBrowser.superclass.constructor.call(this, config);
-  
+
   this.registerStyleSheet();
 };
 Ext.extend(Ext.ux.App.ImageBrowser, Ext.ux.App.Base, {
